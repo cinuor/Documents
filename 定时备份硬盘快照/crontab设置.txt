@@ -1,0 +1,4 @@
+crontab [file]
+配置文件里自己可以编写定时命令
+* 23 * * * ./volumebackup.py >> /var/log/volumebackup.log
+每天23点自动执行脚本

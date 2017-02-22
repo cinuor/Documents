@@ -1,0 +1,26 @@
+{
+'requested_networks':NetworkRequestList(objects=[NetworkRequest]),
+'image':{'status':u'active','name':u'CentOS 6.5 64bit','deleted':False,'container_format':u'bare',
+'created_at':'2016-11-21T10:12:43.000000',
+'disk_format':u'raw',
+'updated_at':'2016-11-21T10:14:19.000000',
+'properties':{
+u'expected_size':u'20',
+u'image_version':u'6.5-64bit',
+u'image_type':u'distribution',
+u'image_build_version':u'2016-11-21-z',
+u'image_name_order':u'100',
+u'image_meta':u'{"os_username":"root",
+"os_password":"UdQGtYlhHj"
+}', u'image_label_order': u'100', u'image_label': u'CentOS'
+},
+'min_disk':0,
+'min_ram':0,
+'checksum':None,
+'owner':u'4aee4f1327e54a89b213646655ea4b1d',
+'is_public':True,
+'deleted_at':None,
+'id':u'b31b22f4-4d06-447a-92ec-72f3f55fd7a8',
+'size':8589934592
+}, 
+'filter_properties': {'instance_type': Flavor(created_at=None,deleted=False,deleted_at=None,disabled=False,ephemeral_gb=0,extra_specs={},flavorid='2',id=13,is_public=True,memory_mb=2048,name='m1.small',projects=<?>,root_gb=20,rxtx_factor=1.0,swap=0,updated_at=None,vcpu_weight=0,vcpus=1), 'scheduler_hints': {}}, 'instances': [Instance(access_ip_v4=None,access_ip_v6=None,architecture=None,auto_disk_config=False,availability_zone=None,cell_name=None,cleaned=False,config_drive='',created_at=2017-01-11T07:20:27Z,default_ephemeral_device=None,default_swap_device=None,deleted=False,deleted_at=None,disable_terminate=False,display_description='asdf',display_name='asdf',ec2_ids=<?>,ephemeral_gb=0,ephemeral_key_uuid=None,fault=<?>,flavor=Flavor(13),host=None,hostname='asdf',id=67,image_ref='b31b22f4-4d06-447a-92ec-72f3f55fd7a8',info_cache=InstanceInfoCache,instance_type_id=13,kernel_id='',key_data=None,key_name=None,launch_index=0,launched_at=None,launched_on=None,locked=False,locked_by=None,memory_mb=2048,metadata={},migration_context=<?>,new_flavor=None,node=None,numa_topology=None,old_flavor=None,os_type=None,pci_devices=<?>,pci_requests=InstancePCIRequests,power_state=0,progress=0,project_id='4aee4f1327e54a89b213646655ea4b1d',ramdisk_id='',reservation_id='r-uqxiau4y',root_device_name=None,root_gb=20,security_groups=SecurityGroupList,shutdown_terminate=False,system_metadata={image_base_image_ref='b31b22f4-4d06-447a-92ec-72f3f55fd7a8',image_container_format='bare',image_disk_format='raw',image_expected_size='20',image_image_build_version='2016-11-21-z',image_image_label='CentOS',image_image_label_order='100',image_image_meta='{"os_username":"root", "os_password":"UdQGtYlhHj"}',image_image_name_order='100',image_image_type='distribution',image_image_version='6.5-64bit',image_min_disk='20',image_min_ram='0'},tags=<?>,task_state='scheduling',terminated_at=None,updated_at=None,user_data=None,user_id='503a13097483476f8b10b8324bf29a44',uuid=450f2a06-996e-49e0-9e0a-ccf30db7a752,vcpu_model=<?>,vcpus=1,vm_mode=None,vm_state='building')], 'admin_password': u'Midea@123', 'injected_files': [], 'security_groups': ['default']}
