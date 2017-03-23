@@ -132,7 +132,7 @@ pipeline = filter1 egg:FilterEgg#filter2 filter3 app<br>
 pipeline实际上就是一个filter的集合，作用很简单，就是在`pipeline`的value当中，按照过滤顺序排列过滤器。只不过要注意的是，最后的项必须是**app**或者是**filter-app**。
 
 
-##基本用法
+###基本用法
 
 在代码中引入`loadapp`方法之后，指定配置文件，然后组成wsgi application
 
@@ -142,7 +142,7 @@ wsgi_app = loadapp('config:/path/to/config.ini')
 ```
 
 
-##全局变量
+###全局变量
 
 在Paste.deploy中，还可以设置全局的变量，方法就是在`[DEFAULT]`下面定义。
 
@@ -157,4 +157,26 @@ set admin_email = bob@example.com<br>
 
 ##Factory
 
-除了一般的`use`方法，
+除了一般的`use`方法，我们还可以在遵循特定的协议的情况下，是有自己编写的过滤器、应用、中间件等等。这个协议就是Paste-Deploy规定的一些工厂方法。
+
+常用的工厂方法包括：`paste.app_factory`、`paste.composite_factory`、`paste.filter_factory`等，这些所谓的协议，其实也就是规定传入参数和返回值。不同的工厂函数，参数可能会有不同，返回值类型也会有所不同。
+
+####paste.app_factory
+这个工厂函数最后返回的wsgi应用程序，具体形式如下：
+```python
+def app_factory(global_config, **local_config):
+    """
+    global: 全局配置参数，以“字典”形式传入
+    local_config：局部配置参数，以“关键字参数”形式传入
+    """
+    def wsgi_app(environ, start_response):
+        start_response('200 OK', [('Content-type', 'text/html')])
+        return ['Hello, World\n']
+
+    return wsgi_app
+```
+
+
+####paste.composite_factory
+组合类工厂方法除了接收
+
