@@ -106,7 +106,7 @@ sudo virsh secret-set-value --secret 457eb676-33da-42ec-9a8c-9293d545c337 --base
 编辑`/etc/ceph/ceph.conf`
 ```
 [client.glance]
-keyring= /etc/ceph/client.glance.keyring
+keyring= /etc/ceph/ceph.client.glance.keyring
 ```
 
 
@@ -114,7 +114,7 @@ keyring= /etc/ceph/client.glance.keyring
 
 ```
 [glance_store]
-stores = glance.store.rbd.Store,glance.store.http.Store
+stores = rbd
 default_store = rbd
 rbd_store_pool = images
 rbd_store_user = glance
