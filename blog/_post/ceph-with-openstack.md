@@ -2,8 +2,8 @@
 title: Ceph与Openstack整合
 date: 2016-02-15 14:19:15
 tags:
-- Ceph
-- Openstack
+- ceph
+- openstack
 ---
 本文介绍如何使用Ceph作为Openstack的后端存储。Ceph作为后端存储能够提供诸如“秒级创建虚拟机、自动恢复等功能”。下面就介绍如何将Ceph与Openstack整合。使用的Ceph版本是`Jewel`版本，Openstack版本是`Newton`
 <!-- more -->
