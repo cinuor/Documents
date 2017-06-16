@@ -2,9 +2,9 @@
 title: 远程调试Openstack代码
 date: 2016-01-10 15:02:56
 tags:
-- Pycharm
-- Openstack
-- Debug
+- pycharm
+- openstack
+- debug
 ---
 Openstack是开源的云计算平台，下面就分享一下如何远程调试Openstack代码。
 <!-- more -->
