@@ -74,7 +74,7 @@ scp /etc/ceph/ceph.client.cinder-backup.keyring root@{client}:/etc/ceph/ceph.cli
 
 同时，我们需要把`client.cinder`的密钥存储在`libvirt`中，因为libvirt在挂载磁盘的时候需要这个密钥。具体操作按照如下步骤
 ```
-ceph auth get-key client.cinder | ssh {nova-compute-node} tee /etc/ceph/client.cinder.key
+ceph auth get-key client.cinder | ssh {nova-compute-node} tee /etc/ceph/ceph.client.cinder.key
 ```
 
 在**计算节点**上，把密钥添加进libvirt
@@ -96,7 +96,7 @@ EOF
 sudo virsh secret-define --file secret.xml
 Secret 457eb676-33da-42ec-9a8c-9293d545c337 created
 
-sudo virsh secret-set-value --secret 457eb676-33da-42ec-9a8c-9293d545c337 --base64 $(cat client.cinder.key) && rm client.cinder.key secret.xml
+sudo virsh secret-set-value --secret 457eb676-33da-42ec-9a8c-9293d545c337 --base64 $(cat ceph.client.cinder.key) && rm ceph.client.cinder.key secret.xml
 ```
 
 
@@ -152,7 +152,7 @@ flavor = keystone
 ```
 ...
 [client.cinder]
-keyring = /etc/ceph/client.cinder.keyring
+keyring = /etc/ceph/ceph.client.cinder.keyring
 ```
 
 
@@ -190,7 +190,7 @@ rbd_secret_uuid = 457eb676-33da-42ec-9a8c-9293d545c337
 ```
 ...
 [client.cinder]
-keyring = /etc/ceph/client.cinder-backup.keyring
+keyring = /etc/ceph/ceph.client.cinder-backup.keyring
 ```
 
 OpenStack cinder-backup需要特定的守护进程，需要自行安装。
@@ -225,19 +225,19 @@ log file = /var/log/qemu/qemu-guest-$pid.log
 rbd concurrent management ops = 20
 
 [client.cinder]
-keyring = /etc/ceph/client.cinder.keyring
+keyring = /etc/ceph/ceph.client.cinder.keyring
 
 [client.cinder-backup]
-keyring = /etc/ceph/client.cinder-backup.keyring
+keyring = /etc/ceph/ceph.client.cinder-backup.keyring
 
 [client.glance]
-keyring = /etc/ceph/client.glance.keyring
+keyring = /etc/ceph/ceph.client.glance.keyring
 ```
 
 配置这些路径的权限
 ```
 mkdir -p /var/run/ceph/guests/ /var/log/qemu/
-chown qemu:libvirtd /var/run/ceph/guests /var/log/qemu/
+chown qemu:libvirt /var/run/ceph/guests /var/log/qemu/
 ```
 
 修改`/etc/nova/nova.conf`
