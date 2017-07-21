@@ -12,6 +12,7 @@
 * 范立洲/男/1993.01.06
 * 四川大学/计算机科学与技术/本科
 * 工作年限：2年
+* 英语等级：大学英语六级
 * Github地址：[https://github.com/cinuor](https://github.com/cinuor)
 * 个人博客地址：[https://cinuor.github.io/blog/](https://cinuor.github.io/blog/)
 * 期望职位：OpenStack系统工程师
@@ -21,12 +22,32 @@
 
 ###技术总结
 * Python开发、调试
+    - Python Web开发
+    - 网络爬虫
+    - Kafka、RabbitMQ
+    - Mysql、Influxdb
+* OpenStack的整体架构、技术细节、源码分析以及修改
+    - 独立搭建Openstack集群
+    - 修改Openstack源码
+    - 熟悉Nova、Keystone、Libvirt
+    - 熟悉Openstack技术栈以及工具
+* Ceph集群的搭建、调优以及与OpenStack集群对接
+    - 独立搭建Ceph集群
+    - 对接Openstack
+    - 能够操作和运维Ceph
+* 能够使用Vue等框架进行前端开发
+    - 基本掌握JavaScript、ES6等语言的使用
+    - 能够使用HTML、CSS等工具进行页面开发
 * TCP/IP等网络协议
 * 常用数据结构以及算法
-* OpenStack的整体架构、技术细节、源码分析以及修改
-* Ceph集群的搭建、调优以及与OpenStack集群对接
 ---
 
+###个人生活
+* 热爱运动，平时能够保证良好的精神状态
+* 热爱生活，生活积极健康，无不良嗜好
+* 良好的沟通合作习惯，为人和善易相处
+
+<div style="page-break-after: always;"></div>
 ###工作经历
 
 * 美的集团流程IT互联网部（2015.11 ~ 至今）
@@ -54,7 +75,6 @@
 #####云主机控制器
 * 设计开发云主机控制
     - 利用Libvirt的Virtio-Serial接口进行通信，摆脱对网络的依赖
-    - 同是适用于VPC网络以及经典网络下的云主机
     - 功能模块插件化，按需添加模块
 * 代码开发：
     - 实现控制器agent
